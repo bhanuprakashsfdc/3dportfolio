@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import data from '../../../data/data.js'
+import data from '../../data/data.js'
 
 export class Badges {
   constructor(game) {

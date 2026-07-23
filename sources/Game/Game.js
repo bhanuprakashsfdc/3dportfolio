@@ -123,7 +123,7 @@ export class Game {
   }
 
   async loadData() {
-    this.data = await import('../../data/data.js').then(m => m.default || m)
+    this.data = await import('../data/data.js').then(m => m.default || m)
     this.renderer.setClearColor(new this.THREE.Color(this.data.colors.sfDarkBg))
   }
 

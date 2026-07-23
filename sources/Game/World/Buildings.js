@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import data from '../../../data/data.js'
+import data from '../../data/data.js'
 
 export function createBuildings(game, THREE) {
   const groupes = []
@@ -56,7 +56,7 @@ export function createBuildings(game, THREE) {
     label.position.set(0, height * 0.55, width * 0.51)
     group.add(label)
 
-    const zoneMat = new THREE.MeshStandardNodeMaterial({
+    const zoneMat = new THREE.MeshStandardMaterial({
       color: zone.color,
       roughness: 0.5,
       metalness: 0.3,

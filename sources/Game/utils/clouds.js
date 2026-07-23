@@ -16,7 +16,7 @@ export function createClouds(game, THREE) {
   const group = new THREE.Group()
   group.name = 'clouds'
 
-  const cloudMaterial = new THREE.MeshStandardNodeMaterial({
+  const cloudMaterial = new THREE.MeshStandardMaterial({
     color: '#FFFFFF',
     transparent: true,
     opacity: 0.6,
