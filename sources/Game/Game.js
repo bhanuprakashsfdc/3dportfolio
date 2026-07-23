@@ -69,6 +69,9 @@ export class Game {
       this.loadingHint.textContent = 'Adding UI...'
       this.setLoadProgress(85)
       await this.createUI()
+      this.loadingHint.textContent = 'Adding zones and badges...'
+      this.setLoadProgress(90)
+      await this.createInteraction()
       this.loadingHint.textContent = 'Almost ready...'
       this.setLoadProgress(95)
 
@@ -170,6 +173,20 @@ export class Game {
     this.systems.overlay = new Overlay(this)
   }
 
+  async createInteraction() {
+    const { Zones } = await import('./Interactive/Zones.js')
+    const { Badges } = await import('./Interactive/Badges.js')
+    const { Nipple } = await import('./Inputs/Nipple.js')
+
+    this.systems.zones = new Zones(this)
+    this.systems.badges = new Badges(this)
+    this.systems.nipple = new Nipple(this)
+
+    if (this.systems.nipple.isTouchDevice()) {
+      this.systems.nipple.enable()
+    }
+  }
+
   hideLoading() {
     this.loadingScreen.classList.add('fade-out')
     this.container.classList.remove('hidden')
@@ -230,6 +247,8 @@ export class Game {
       if (this.systems.physics) this.systems.physics.update(this.time.delta)
       if (this.systems.vehicle) this.systems.vehicle.update(this.time.delta, this.systems.inputs)
       if (this.systems.inputs) this.systems.inputs.update(this.time.delta)
+      if (this.systems.zones) this.systems.zones.update(this.time.delta)
+      if (this.systems.badges) this.systems.badges.update(this.time.delta, this.time.elapsed)
       if (this.systems.hud) this.systems.hud.update()
       if (this.systems.minimap) this.systems.minimap.update()
 

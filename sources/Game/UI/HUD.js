@@ -40,6 +40,10 @@ export class HUD {
     document.getElementById('btn-whispers')?.addEventListener('click', () => {
       this.game.systems.notifications.show('💬 Whispers coming soon!', 2000)
     })
+    document.getElementById('btn-settings')?.addEventListener('click', () => {
+      this.game.systems.nipple?.enable()
+      this.game.systems.notifications.show('📱 Mobile controls enabled', 1500)
+    })
     document.getElementById('btn-home')?.addEventListener('click', () => {
       if (this.game.systems.vehicle) {
         this.game.systems.vehicle.group.position.set(0, 3, 0)

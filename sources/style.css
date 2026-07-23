@@ -393,6 +393,113 @@ html, body {
   to { opacity: 1; transform: translateX(0); }
 }
 
+/* Zone Panel */
+.zone-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.zone-panel-card {
+  background: linear-gradient(180deg, rgba(13, 0, 26, 0.95), rgba(4, 84, 179, 0.15));
+  border: 1px solid rgba(0, 161, 224, 0.4);
+  border-radius: 16px;
+  padding: 28px 32px;
+  max-width: 420px;
+  width: 90%;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  position: relative;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.zone-panel-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zone-panel-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.zone-panel-icon {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+.zone-panel-name {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #00A1E0;
+  margin: 0;
+}
+
+.zone-panel-subtitle {
+  font-size: 0.9rem;
+  color: #C0C0C0;
+  margin-top: 2px;
+}
+
+.zone-panel-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 161, 224, 0.5), transparent);
+  margin: 16px 0;
+}
+
+.zone-panel-mascot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.zone-panel-mascot-name {
+  font-weight: 700;
+  color: #FFD700;
+  font-size: 0.95rem;
+}
+
+.zone-panel-mascot-role {
+  font-size: 0.75rem;
+  color: #C0C0C0;
+  background: rgba(0, 161, 224, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.zone-panel-dialogue {
+  font-style: italic;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.zone-panel-description {
+  font-size: 0.8rem;
+  color: #C0C0C0;
+  margin-bottom: 14px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .top-left {
