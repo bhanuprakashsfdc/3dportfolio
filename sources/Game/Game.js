@@ -72,6 +72,9 @@ export class Game {
       this.loadingHint.textContent = 'Adding zones and badges...'
       this.setLoadProgress(90)
       await this.createInteraction()
+      this.loadingHint.textContent = 'Spawning mascots and particles...'
+      this.setLoadProgress(92)
+      await this.createWorldContent()
       this.loadingHint.textContent = 'Almost ready...'
       this.setLoadProgress(95)
 
@@ -187,6 +190,16 @@ export class Game {
     }
   }
 
+  async createWorldContent() {
+    const { createMascots } = await import('./World/Mascots.js')
+    const { createZoneLighting } = await import('./World/ZoneLighting.js')
+    const { createBadgeParticles } = await import('./World/BadgeParticles.js')
+
+    createMascots(this, this.THREE)
+    createZoneLighting(this, this.THREE)
+    createBadgeParticles(this, this.THREE)
+  }
+
   hideLoading() {
     this.loadingScreen.classList.add('fade-out')
     this.container.classList.remove('hidden')
@@ -262,6 +275,9 @@ export class Game {
 
       this.updateCamera()
       this.updateClouds()
+      this.updateMascots()
+      this.updateBadgeParticles()
+      this.updateZoneLighting()
       this.render()
     }
 
@@ -287,6 +303,54 @@ export class Game {
         cloud.position.z = Math.sin(ud.angle) * ud.radius
       })
     }
+  }
+
+  updateMascots() {
+    if (!this.systems.mascots) return
+    const t = this.time.elapsed
+    this.systems.mascots.children.forEach(mascot => {
+      const ud = mascot.userData
+      if (!ud) return
+      const floatY = Math.sin(t * ud.speed + ud.phase) * 0.25
+      mascot.position.y = ud.baseY + floatY
+      if (ud.halo) {
+        ud.halo.rotation.z += 0.01
+        ud.halo.material.opacity = 0.25 + Math.sin(t * 2 + ud.phase) * 0.1
+      }
+      if (ud.sprite) {
+        ud.sprite.material.opacity = 0.85 + Math.sin(t * 3 + ud.phase) * 0.15
+      }
+    })
+  }
+
+  updateBadgeParticles() {
+    if (!this.systems.badgeParticles) return
+    const t = this.time.elapsed
+    this.systems.badgeParticles.children.forEach(group => {
+      group.children.forEach(p => {
+        const ud = p.userData
+        if (!ud) return
+        ud.angle += ud.speed * 0.02
+        p.position.x = Math.cos(ud.angle) * ud.radius
+        p.position.z = Math.sin(ud.angle) * ud.radius
+        p.position.y = ud.baseY + Math.sin(t * ud.speed * 2 + ud.yOffset) * 0.25
+        p.material.opacity = 0.5 + Math.sin(t * 3 + ud.yOffset) * 0.3
+      })
+    })
+  }
+
+  updateZoneLighting() {
+    if (!this.systems.zoneLighting) return
+    const t = this.time.elapsed
+    this.systems.zoneLighting.children.forEach(child => {
+      if (child.isPointLight) {
+        child.intensity = 2.5 + Math.sin(t * 1.5 + child.position.x) * 0.6
+      }
+      if (child.isMesh && child.name.startsWith('accent-')) {
+        child.rotation.z += 0.003
+        child.material.opacity = 0.35 + Math.sin(t * 2 + child.position.x) * 0.15
+      }
+    })
   }
 
   render() {

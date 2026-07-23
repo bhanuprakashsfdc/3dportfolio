@@ -89,17 +89,17 @@ export const data = {
   ],
 
   mascots: [
-    { id: 'Astro', name: 'Astro Nomical', role: 'Community & Inclusion', color: '#00A1E0', position: { x: 0, y: 0, z: 0 } },
-    { id: 'Cloudy', name: 'Cloudy the Goat', role: 'Salesforce Admins', color: '#3EB489', position: { x: -45, y: 0, z: 25 } },
-    { id: 'Codey', name: 'Codey the Bear', role: 'Salesforce Developers', color: '#FF7F50', position: { x: -35, y: 0, z: -35 } },
-    { id: 'Einstein', name: 'Einstein', role: 'AI Innovation', color: '#9C6ADE', position: { x: 40, y: 0, z: -30 } },
-    { id: 'Ruth', name: 'Ruth the Elephant', role: 'Architects', color: '#C5A059', position: { x: 50, y: 3, z: 35 } },
-    { id: 'Zig', name: 'Zig the Zebra', role: 'Salesblazer Community', color: '#7A7A7A', position: { x: 55, y: 0, z: 55 } },
-    { id: 'Koa', name: 'Koa the Dog', role: 'Community & Love', color: '#F4D03F', position: { x: 60, y: 0, z: 0 } },
-    { id: 'Flo', name: 'Flo the Flying Squirrel', role: 'Automation', color: '#5BCEFA', position: { x: -55, y: 1.5, z: -15 } },
-    { id: 'Appy', name: 'Appy the Bobcat', role: 'Partners', color: '#E91E8C', position: { x: -55, y: 1, z: 20 } },
-    { id: 'Max', name: 'Max the Mule', role: 'Integration / MuleSoft', color: '#FF6B6B', position: { x: 0, y: 0, z: -55 } },
-    { id: 'Brandy', name: 'Brandy the Fox', role: 'Marketing', color: '#E91E8C', position: { x: -50, y: 0, z: 50 } }
+    { id: 'Astro', name: 'Astro Nomical', role: 'Community & Inclusion', color: '#00A1E0', emoji: '🧑‍🚀', position: { x: 0, y: 0, z: 0 } },
+    { id: 'Cloudy', name: 'Cloudy the Goat', role: 'Salesforce Admins', color: '#3EB489', emoji: '🐐', position: { x: -45, y: 0, z: 25 } },
+    { id: 'Codey', name: 'Codey the Bear', role: 'Salesforce Developers', color: '#FF7F50', emoji: '🐻', position: { x: -35, y: 0, z: -35 } },
+    { id: 'Einstein', name: 'Einstein', role: 'AI Innovation', color: '#9C6ADE', emoji: '🧠', position: { x: 40, y: 0, z: -30 } },
+    { id: 'Ruth', name: 'Ruth the Elephant', role: 'Architects', color: '#C5A059', emoji: '🐘', position: { x: 50, y: 3, z: 35 } },
+    { id: 'Zig', name: 'Zig the Zebra', role: 'Salesblazer Community', color: '#7A7A7A', emoji: '🦓', position: { x: 55, y: 0, z: 55 } },
+    { id: 'Koa', name: 'Koa the Dog', role: 'Community & Love', color: '#F4D03F', emoji: '🐕', position: { x: 60, y: 0, z: 0 } },
+    { id: 'Flo', name: 'Flo the Flying Squirrel', role: 'Automation', color: '#5BCEFA', emoji: '🐿️', position: { x: -55, y: 1.5, z: -15 } },
+    { id: 'Appy', name: 'Appy the Bobcat', role: 'Partners', color: '#E91E8C', emoji: '🐆', position: { x: -55, y: 1, z: 20 } },
+    { id: 'Max', name: 'Max the Mule', role: 'Integration / MuleSoft', color: '#FF6B6B', emoji: '🫏', position: { x: 0, y: 0, z: -55 } },
+    { id: 'Brandy', name: 'Brandy the Fox', role: 'Marketing', color: '#E91E8C', emoji: '🦊', position: { x: -50, y: 0, z: 50 } }
   ],
 
   dialogues: {
