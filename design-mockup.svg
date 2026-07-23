@@ -1,0 +1,339 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0454B3"/>
+      <stop offset="50%" stop-color="#1589EE"/>
+      <stop offset="100%" stop-color="#E8F4FD"/>
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#D4E9F7" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#005290"/>
+      <stop offset="100%" stop-color="#1457A6"/>
+    </linearGradient>
+    <linearGradient id="towerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#005290" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#00A1E0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0.7"/>
+    </linearGradient>
+    <radialGradient id="badgeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="cloudPattern" x="0" y="0" width="100" height="50" patternUnits="userSpaceOnUse">
+      <ellipse cx="30" cy="35" rx="25" ry="12" fill="white" opacity="0.6"/>
+      <ellipse cx="60" cy="30" rx="20" ry="10" fill="white" opacity="0.5"/>
+      <ellipse cx="80" cy="38" rx="22" ry="11" fill="white" opacity="0.55"/>
+    </pattern>
+  </defs>
+
+  <!-- SKY BACKGROUND -->
+  <rect x="0" y="0" width="1600" height="1000" fill="url(#skyGrad)"/>
+  
+  <!-- CLOUDS LAYER -->
+  <rect x="0" y="0" width="1600" height="600" fill="url(#cloudPattern)" opacity="0.3"/>
+  
+  <!-- Floating Cloud Platforms -->
+  <ellipse cx="300" cy="650" rx="180" ry="30" fill="url(#cloudGrad)" filter="url(#glow)"/>
+  <ellipse cx="800" cy="720" rx="300" ry="40" fill="url(#cloudGrad)" filter="url(#glow)"/>
+  <ellipse cx="1300" cy="680" rx="200" ry="35" fill="url(#cloudGrad)" filter="url(#glow)"/>
+  <ellipse cx="600" cy="500" rx="150" ry="25" fill="url(#cloudGrad)" opacity="0.8" filter="url(#glow)"/>
+  <ellipse cx="1050" cy="480" rx="160" ry="28" fill="url(#cloudGrad)" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- CENTRAL AGENTBLAZER TOWER -->
+  <rect x="740" y="180" width="120" height="300" fill="url(#towerGrad)" rx="8" filter="url(#glow)"/>
+  <rect x="780" y="140" width="40" height="70" fill="#FFD700" opacity="0.8" filter="url(#glow)" rx="4"/>
+  <rect x="805" y="100" width="20" height="50" fill="#FFFFFF" opacity="0.9" filter="url(#glow)" rx="2"/>
+  <polygon points="780,140 820,140 805,80" fill="#FFD700" opacity="0.9" filter="url(#glow)"/>
+  <!-- Tower windows -->
+  <g fill="#FFFFFF" opacity="0.7">
+    <rect x="760" y="220" width="20" height="30" rx="3"/>
+    <rect x="820" y="220" width="20" height="30" rx="3"/>
+    <rect x="760" y="260" width="20" height="30" rx="3"/>
+    <rect x="820" y="260" width="20" height="30" rx="3"/>
+    <rect x="760" y="360" width="20" height="30" rx="3"/>
+    <rect x="820" y="360" width="20" height="30" rx="3"/>
+    <rect x="760" y="420" width="20" height="30" rx="3"/>
+    <rect x="820" y="420" width="20" height="30" rx="3"/>
+  </g>
+
+  <!-- CERTIFICATION HALL (Main Building - Admin Gardens) -->
+  <rect x="280" y="480" width="140" height="100" fill="#1589EE" rx="6" filter="url(#glow)" opacity="0.9"/>
+  <rect x="300" y="460" width="100" height="30" fill="#FFFFFF" rx="4" filter="url(#glow)" opacity="0.85"/>
+  <text x="350" y="480" text-anchor="middle" fill="#005290" font-size="12" font-weight="bold">Certification Hall</text>
+  <rect x="290" y="500" width="25" height="35" rx="2" fill="#005290" opacity="0.7"/>
+  <rect x="320" y="500" width="25" height="35" rx="2" fill="#005290" opacity="0.7"/>
+  <rect x="350" y="500" width="25" height="35" rx="2" fill="#005290" opacity="0.7"/>
+  <rect x="380" y="500" width="25" height="35" rx="2" fill="#005290" opacity="0.7"/>
+  
+  <!-- DEVELOPER DISTRICT (Codey's Workshop) -->
+  <rect x="480" y="560" width="120" height="90" fill="#FF7F50" rx="6" filter="url(#glow)" opacity="0.9"/>
+  <rect x="500" y="540" width="80" height="28" fill="#FFFFFF" rx="4" filter="url(#glow)" opacity="0.85"/>
+  <text x="540" y="558" text-anchor="middle" fill="#D4652A" font-size="12" font-weight="bold">Developer District</text>
+  <rect x="495" y="575" width="20" height="25" rx="2" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="525" y="575" width="20" height="25" rx="2" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="555" y="575" width="20" height="25" rx="2" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- DATA & AI QUARTER (Einstein's Lab) -->
+  <rect x="980" y="420" width="130" height="80" fill="#9C6ADE" rx="6" filter="url(#glow)" opacity="0.9"/>
+  <rect x="1000" y="400" width="90" height="28" fill="#FFFFFF" rx="4" filter="url(#glow)" opacity="0.85"/>
+  <text x="1045" y="418" text-anchor="middle" fill="#7B3FA3" font-size="12" font-weight="bold">Data & AI Quarter</text>
+  <rect x="995" y="440" width="22" height="22" rx="11" fill="#FFFFFF" opacity="0.7"/>
+  <rect x="1025" y="440" width="22" height="22" rx="11" fill="#FFFFFF" opacity="0.7"/>
+  <rect x="1055" y="440" width="22" height="22" rx="11" fill="#FFFFFF" opacity="0.7"/>
+  
+  <!-- ARCHITECTURE SUMMIT -->
+  <polygon points="1100,580 1200,580 1150,440" fill="#C5A059" filter="url(#glow)" opacity="0.9"/>
+  <rect x="1130" y="460" width="40" height="50" fill="#8B6914" rx="4" filter="url(#glow)" opacity="0.8"/>
+  <rect x="1145" y="480" width="10" height="20" fill="#FFD700" opacity="0.9"/>
+  <text x="1150" y="610" text-anchor="middle" fill="#8B6914" font-size="11" font-weight="bold">Architecture Summit</text>
+  
+  <!-- MARKETING PLAZA -->
+  <rect x="200" y="620" width="110" height="70" fill="#E91E8C" rx="6" filter="url(#glow)" opacity="0.9"/>
+  <rect x="215" y="600" width="80" height="25" fill="#FFFFFF" rx="4" filter="url(#glow)" opacity="0.85"/>
+  <text x="255" y="617" text-anchor="middle" fill="#AD1662" font-size="11" font-weight="bold">Marketing Plaza</text>
+  <rect x="210" y="640" width="18" height="25" rx="2" fill="#FFD700" opacity="0.7"/>
+  <rect x="235" y="640" width="18" height="25" rx="2" fill="#FFFFFF" opacity="0.7"/>
+  <rect x="260" y="640" width="18" height="25" rx="2" fill="#FFD700" opacity="0.7"/>
+  
+  <!-- ENTRY HUB CENTER -->
+  <circle cx="800" cy="320" r="80" fill="#00A1E0" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="800" cy="320" r="60" fill="#FFFFFF" opacity="0.3"/>
+  <text x="800" y="300" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="bold" filter="url(#glow)">Entry Hub</text>
+  <text x="800" y="320" text-anchor="middle" fill="#FFFFFF" font-size="11" filter="url(#glow)">Welcome Plaza</text>
+  <text x="800" y="340" text-anchor="middle" fill="#FFD700" font-size="10" filter="url(#glow)">With Astro Guide</text>
+  
+  <!-- INTEGRATION BRIDGE -->
+  <rect x="680" y="620" width="160" height="30" fill="#FF6B6B" rx="15" filter="url(#glow)" opacity="0.85"/>
+  <text x="760" y="640" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="bold">Integration Bridge</text>
+  
+  <!-- ROADS / TRAILS -->
+  <path d="M350 580 Q 540 540 540 620" stroke="url(#roadGrad)" stroke-width="14" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+  <path d="M540 620 Q 620 720 800 450" stroke="url(#roadGrad)" stroke-width="14" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+  <path d="M800 450 Q 1000 480 1045 460" stroke="url(#roadGrad)" stroke-width="14" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+  <path d="M540 620 Q 680 630 760 620" stroke="url(#roadGrad)" stroke-width="14" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+  <path d="M760 620 Q 1150 580 1150 520" stroke="url(#roadGrad)" stroke-width="14" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+  <path d="M350 580 Q 250 620 255 645" stroke="url(#roadGrad)" stroke-width="14" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+  <path d="M540 620 Q 1000 680 1045 460" stroke="url(#roadGrad)" stroke-width="14" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+  <path d="M300 600 Q 280 550 350 580" stroke="url(#roadGrad)" stroke-width="14" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+
+  <!-- BADGE COLLECTIBLES (16 certs) -->
+  <g filter="url(#badgeGlow)" opacity="0.9">
+    <circle cx="350" cy="560" r="8" fill="#FFD700"/>
+    <circle cx="620" cy="580" r="8" fill="#FFD700"/>
+    <circle cx="640" cy="480" r="8" fill="#FFD700"/>
+    <circle cx="960" cy="520" r="8" fill="#FFD700"/>
+    <circle cx="980" cy="620" r="8" fill="#FFD700"/>
+    <circle cx="1400" cy="580" r="8" fill="#FFD700"/>
+    <circle cx="1300" cy="720" r="8" fill="#FFD700"/>
+    <circle cx="1200" cy="720" r="8" fill="#FFD700"/>
+    <circle cx="1500" cy="680" r="8" fill="#FFD700"/>
+    <circle cx="1600" cy="720" r="8" fill="#FFD700"/>
+    <circle cx="120" cy="660" r="8" fill="#FFD700"/>
+    <circle cx="1600" cy="860" r="8" fill="#FFD700"/>
+    <circle cx="900" cy="620" r="8" fill="#FFD700"/>
+    <circle cx="700" cy="700" r="8" fill="#FFD700"/>
+    <circle cx="500" cy="760" r="8" fill="#FFD700"/>
+    <circle cx="300" cy="820" r="8" fill="#FFD700"/>
+  </g>
+
+  <!-- MASCOT ICONS -->
+  <!-- Astro at center -->
+  <g transform="translate(810, 280)">
+    <circle cx="20" cy="20" r="15" fill="#FFFFFF" opacity="0.9" filter="url(#glow)"/>
+    <text x="20" y="25" text-anchor="middle" font-size="14" opacity="0.8">🧑‍🚀</text>
+  </g>
+  
+  <!-- Cloudy near Admin -->
+  <g transform="translate(230, 420)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🐐</text>
+  </g>
+  
+  <!-- Codey near Dev -->
+  <g transform="translate(430, 510)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🐻</text>
+  </g>
+  
+  <!-- Einstein near AI -->
+  <g transform="translate(930, 350)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🧠</text>
+  </g>
+  
+  <!-- Ruth at Summit -->
+  <g transform="translate(1060, 470)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🐘</text>
+  </g>
+  
+  <!-- Brandy near Marketing -->
+  <g transform="translate(130, 580)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🦊</text>
+  </g>
+  
+  <!-- Zig near Sales -->
+  <g transform="translate(1050, 560)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🦓</text>
+  </g>
+  
+  <!-- Koa near Community -->
+  <g transform="translate(600, 780)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🐕</text>
+  </g>
+  
+  <!-- Flo near Automation -->
+  <g transform="translate(700, 480)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🦿</text>
+  </g>
+  
+  <!-- Max near Integration -->
+  <g transform="translate(640, 580)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🫏</text>
+  </g>
+  
+  <!-- Appy near Platform -->
+  <g transform="translate(1300, 500)">
+    <circle cx="15" cy="15" r="12" fill="#FFFFFF" opacity="0.85" filter="url(#glow)"/>
+    <text x="15" y="19" text-anchor="middle" font-size="11" opacity="0.9">🐆</text>
+  </g>
+
+  <!-- PLAYER VEHICLE (TrailRider) -->
+  <g transform="translate(540, 620)">
+    <rect x="0" y="0" width="40" height="20" fill="#FFD700" rx="5" filter="url(#glow)"/>
+    <text x="20" y="14" text-anchor="middle" font-size="8" font-weight="bold" fill="#005290">TrailRider</text>
+  </g>
+
+  <!-- UI OVERLAY -->
+  <!-- HUD Panel Top-Left -->
+  <rect x="30" y="30" width="320" height="120" fill="#0D001A" opacity="0.85" rx="12" filter="url(#glow)"/>
+  <text x="45" y="55" fill="#1589EE" font-size="18" font-weight="bold">⚡ Trailblazer Portfolio</text>
+  <text x="45" y="78" fill="#FFFFFF" font-size="13">Salesforce Architect &amp; Technical Lead</text>
+  <text x="45" y="95" fill="#C0C0C0" font-size="11">Bhanu Prakash ⚡</text>
+  <text x="45" y="110" fill="#FF7F50" font-size="11">🏆 16 Certifications | 🌟 Agentblazer</text>
+  <text x="45" y="125" fill="#00A1E0" font-size="10">🏠 Entry Hub → 🚧 Driving Around...</text>
+  
+  <!-- Mini Map Top-Right -->
+  <g transform="translate(1280, 30)">
+    <rect x="0" y="0" width="280" height="220" fill="#0D001A" opacity="0.85" rx="12" filter="url(#glow)"/>
+    <text x="140" y="25" text-anchor="middle" fill="#1589EE" font-size="14" font-weight="bold">🗺 World Map</text>
+    
+    <!-- Mini world representation -->
+    <ellipse cx="140" cy="150" rx="120" ry="50" fill="#E8F4FD" opacity="0.3"/>
+    
+    <!-- Mini roads -->
+    <path d="M100 130 Q140 110 180 130" stroke="#1589EE" stroke-width="3" fill="none" opacity="0.8"/>
+    <path d="M140 130 Q140 160 80 180" stroke="#1589EE" stroke-width="3" fill="none" opacity="0.8"/>
+    <path d="M140 130 Q200 160 220 140" stroke="#1589EE" stroke-width="3" fill="none" opacity="0.8"/>
+    
+    <!-- Mini zones -->
+    <rect x="120" y="90" width="40" height="20" fill="#00A1E0" rx="3" opacity="0.9"/>
+    <text x="140" y="104" text-anchor="middle" fill="#FFFFFF" font-size="8">HUB</text>
+    
+    <rect x="60" y="140" width="35" height="18" fill="#1589EE" rx="3" opacity="0.9"/>
+    <text x="77" y="152" text-anchor="middle" fill="#FFFFFF" font-size="7">ADMIN</text>
+    
+    <rect x="100" y="160" width="40" height="18" fill="#FF7F50" rx="3" opacity="0.9"/>
+    <text x="120" y="172" text-anchor="middle" fill="#FFFFFF" font-size="7">DEV</text>
+    
+    <rect x="190" y="120" width="40" height="18" fill="#9C6ADE" rx="3" opacity="0.9"/>
+    <text x="210" y="132" text-anchor="middle" fill="#FFFFFF" font-size="7">AI</text>
+    
+    <rect x="210" y="150" width="35" height="18" fill="#C5A059" rx="3" opacity="0.9"/>
+    <text x="227" y="162" text-anchor="middle" fill="#FFFFFF" font-size="7">ARCH</text>
+    
+    <rect x="180" y="180" width="50" height="18" fill="#FF6B6B" rx="3" opacity="0.9"/>
+    <text x="205" y="192" text-anchor="middle" fill="#FFFFFF" font-size="7">INTEGRATE</text>
+    
+    <rect x="60" y="180" width="35" height="18" fill="#E91E8C" rx="3" opacity="0.9"/>
+    <text x="77" y="192" text-anchor="middle" fill="#FFFFFF" font-size="7">MKT</text>
+    
+    <!-- Player dot on map -->
+    <circle cx="140" cy="130" r="4" fill="#FFD700" filter="url(#badgeGlow)"/>
+    <text x="140" y="125" text-anchor="middle" fill="#FFD700" font-size="7">YOU</text>
+  </g>
+  
+  <!-- Bottom Controls Bar -->
+  <rect x="0" y="900" width="1600" height="100" fill="#0D001A" opacity="0.9" rx="0" filter="url(#glow)"/>
+  <rect x="0" y="900" width="1600" height="3" fill="#00A1E0" filter="url(#glow)"/>
+  
+  <!-- Controller-style buttons -->
+  <g transform="translate(40, 930)">
+    <rect x="0" y="0" width="50" height="50" fill="#1589EE" rx="25" opacity="0.8" filter="url(#glow)"/>
+    <text x="25" y="32" text-anchor="middle" fill="#FFFFFF" font-size="20">🏠</text>
+    <text x="25" y="68" text-anchor="middle" fill="#FFFFFF" font-size="11">HOME</text>
+  </g>
+  
+  <g transform="translate(120, 930)">
+    <rect x="0" y="0" width="50" height="50" fill="#FF7F50" rx="25" opacity="0.8" filter="url(#glow)"/>
+    <text x="25" y="32" text-anchor="middle" fill="#FFFFFF" font-size="20">⚙</text>
+    <text x="25" y="68" text-anchor="middle" fill="#FFFFFF" font-size="11">AUDIO</text>
+  </g>
+  
+  <g transform="translate(200, 930)">
+    <rect x="0" y="0" width="50" height="50" fill="#9C6ADE" rx="25" opacity="0.8" filter="url(#glow)"/>
+    <text x="25" y="32" text-anchor="middle" fill="#FFFFFF" font-size="20">🏆</text>
+    <text x="25" y="68" text-anchor="middle" fill="#FFFFFF" font-size="11">AWARDS</text>
+  </g>
+  
+  <g transform="translate(280, 930)">
+    <rect x="0" y="0" width="50" height="50" fill="#4CAF50" rx="25" opacity="0.8" filter="url(#glow)"/>
+    <text x="25" y="32" text-anchor="middle" fill="#FFFFFF" font-size="20">🗺</text>
+    <text x="25" y="68" text-anchor="middle" fill="#FFFFFF" font-size="11">MAP</text>
+  </g>
+  
+  <g transform="translate(360, 930)">
+    <rect x="0" y="0" width="50" height="50" fill="#C5A059" rx="25" opacity="0.8" filter="url(#glow)"/>
+    <text x="25" y="32" text-anchor="middle" fill="#FFFFFF" font-size="20">💬</text>
+    <text x="25" y="68" text-anchor="middle" fill="#FFFFFF" font-size="11">WHISPERS</text>
+  </g>
+  
+  <!-- Mobile joystick controls hint -->
+  <g transform="translate(580, 920)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="14" font-weight="bold">📱 Mobile Controls</text>
+    <text x="0" y="18" fill="#C0C0C0" font-size="12">One finger → Drive | Two fingers → Camera</text>
+    <text x="0" y="34" fill="#C0C0C0" font-size="12">Tap 🚗 to Jump | Tap ⭐ to Interact</text>
+  </g>
+  
+  <!-- Wasd hint on bottom right -->
+  <g transform="translate(1280, 930)">
+    <text x="0" y="0" fill="#FFFFFF" font-size="14" font-weight="bold">⌨ Desktop Controls</text>
+    <text x="0" y="18" fill="#C0C0C0" font-size="12">W A S D → Drive | MOUSE → Camera</text>
+    <text x="0" y="34" fill="#C0C0C0" font-size="12">SHIFT → Boost | CTRL → Brake | SPACE → Jump</text>
+    <text x="0" y="50" fill="#C0C0C0" font-size="12">E → Interact | M → Map | R → Respawn</text>
+    <text x="0" y="66" fill="#C0C0C0" font-size="12">ESC → Pause | 🎧 Audio toggle available</text>
+  </g>
+  
+  <!-- Quality indicator -->
+  <g transform="translate(850, 930)">
+    <text x="0" y="0" fill="#00A1E0" font-size="12">🖥 WebGPU Active</text>
+    <text x="0" y="18" fill="#4CAF50" font-size="12">✅ 60 FPS | Quality: HIGH</text>
+    <text x="0" y="34" fill="#C0C0C0" font-size="11">🎨 Made with ♥ using Three.js + Rapier</text>
+  </g>
+  
+  <!-- Swimming trailblazer icon bottom center -->
+  <g transform="translate(730, 960)">
+    <text x="30" y="20" text-anchor="middle" fill="#FFFFFF" font-size="14">🌊 Salesforce Park — Trailhead Universe 🌊</text>
+  </g>
+
+  <!-- Loading hint -->
+  <text x="800" y="40" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="bold" opacity="0.9">
+    ⚡ Welcome, Trailblazer! Drive around to discover my Salesforce journey ⚡
+  </text>
+  
+</svg>

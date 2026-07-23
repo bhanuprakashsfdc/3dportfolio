@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Bhanu Prakash - Salesforce Architect & Technical Lead | Interactive 3D Portfolio. Drive through the Trailhead Universe and explore 16 certifications, 11 zones, and Salesforce mascots." />
+  <meta name="theme-color" content="#00A1E0" />
+  <meta property="og:title" content="Bhanu Prakash — Salesforce Architect 3D Portfolio" />
+  <meta property="og:description" content="Interactive 3D portfolio. Drive through Salesforce Park and discover my Salesforce journey." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bhanuprakashsfdc.com/" />
+  <meta property="og:image" content="/static/textures/ui/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bhanu Prakash — Salesforce Architect 3D Portfolio" />
+  <meta name="twitter:description" content="Interactive 3D portfolio. Drive through Salesforce Park." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bhanu Prakash",
+    "jobTitle": "Salesforce Architect & Technical Lead",
+    "url": "https://bhanuprakashsfdc.com/"
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/static/textures/ui/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <title>Bhanu Prakash | Salesforce Architect — 3D Portfolio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="loading">
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">⚡</div>
+      <h1 class="loading-title">Salesforce Park</h1>
+      <p class="loading-subtitle">Trailhead Universe</p>
+      <div class="loading-bar">
+        <div class="loading-progress" id="loading-progress"></div>
+      </div>
+      <p class="loading-hint" id="loading-hint">Loading...</p>
+      <p class="loading-tagline">Welcome, Trailblazer! Drive around to discover my Salesforce journey.</p>
+    </div>
+  </div>
+
+  <div id="game-container" class="hidden">
+    <canvas id="game-canvas"></canvas>
+  </div>
+
+  <div id="overlay-root" class="hidden"></div>
+  <div id="toast-root" class="hidden"></div>
+
+  <script type="module" src="./index.js"></script>
+</body>
+</html>

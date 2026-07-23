@@ -1,0 +1,32 @@
+{
+  "name": "salesforce-3d-portfolio",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "compress": "node scripts/compress.js",
+    "lint": "echo 'Lint placeholder'"
+  },
+  "dependencies": {
+    "three": "^0.184.0",
+    "@dimforge/rapier3d": "^0.15.0",
+    "gsap": "^3.12.5",
+    "howler": "^2.2.4",
+    "nipplejs": "^0.10.2",
+    "camera-controls": "^2.9.0",
+    "tweakpane": "^4.0.4",
+    "seedrandom": "^3.0.5"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "vite-plugin-wasm": "^3.4.1",
+    "vite-plugin-top-level-await": "^1.5.0",
+    "vite-plugin-restart": "^0.4.0",
+    "vite-plugin-node-polyfills": "^0.22.0",
+    "@vitejs/plugin-basic-ssl": "^1.2.0",
+    "@gltf-transform/cli": "^4.1.3"
+  }
+}
