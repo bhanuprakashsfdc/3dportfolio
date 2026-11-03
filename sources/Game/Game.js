@@ -106,6 +106,7 @@ export class Game {
       antialias: this.quality.level === 0,
       alpha: false
     })
+    await this.renderer.init()
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, this.quality.level === 0 ? 2 : 1.5))
     this.renderer.setSize(window.innerWidth, window.innerHeight)
     this.renderer.toneMapping = 2

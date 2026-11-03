@@ -2,7 +2,6 @@ import wasm from 'vite-plugin-wasm'
 import topLevelAwait from 'vite-plugin-top-level-await'
 import restart from 'vite-plugin-restart'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
-import basicSsl from '@vitejs/plugin-basic-ssl'
 
 export default {
   root: 'sources',
@@ -22,7 +21,6 @@ export default {
     wasm(),
     topLevelAwait(),
     restart({ restart: ['../static/**'] }),
-    nodePolyfills(),
-    basicSsl()
+    nodePolyfills()
   ]
 }

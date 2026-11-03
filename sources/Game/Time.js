@@ -4,7 +4,7 @@ export class Time {
     this.delta = 0
     this.deltaCapped = 0
     this.now = performance.now()
-    this.start = this.now
+    this.startTime = this.now
     this.frame = 0
     this.callback = null
     this.rafId = null

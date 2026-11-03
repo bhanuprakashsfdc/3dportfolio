@@ -8,7 +8,7 @@ export class PhysicsWorld {
   }
 
   async init() {
-    const { RAPIER } = await import('@dimforge/rapier3d')
+    const RAPIER = await import('@dimforge/rapier3d')
     this.RAPIER = RAPIER
     this.world = new RAPIER.World({ x: 0, y: this.game.data.settings.gravity, z: 0 })
 
